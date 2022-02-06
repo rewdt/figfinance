@@ -1,0 +1,41 @@
+{
+  "name": "figfinance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node ./build/index.js",
+    "start:dev": "nodemon --exec babel-node ./src/index.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build src -s",
+    "build": "npm run clean && npm run build-babel"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "axios": "^0.23.0",
+    "cors": "^2.8.5",
+    "datauri": "^4.1.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.14",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/runtime": "^7.14.6",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1"
+  },
+  "author": "Andrew Bamidele",
+  "license": "ISC"
+}
