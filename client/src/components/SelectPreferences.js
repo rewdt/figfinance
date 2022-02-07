@@ -32,7 +32,7 @@ function SelectPreferences({ open, handleClose, onCategoryChange }) {
           Please select any item(s) from the list to set your preferences
         </Typography>
         <Select
-          defaultValue={[Categories[2], Categories[3]]}
+          // defaultValue={[Categories[2], Categories[3]]}
           isMulti
           name="colors"
           options={Categories}

@@ -3,6 +3,16 @@ import { Button, Card, Grid, Paper, Typography } from '@mui/material';
 import SelectPreferences from '../components/SelectPreferences';
 import Api from '../utils/api';
 
+const styles = {
+  card: {
+    minHeight: 250,
+    p: 2,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+};
+
 function Events() {
   const [open, setOpen] = React.useState(true);
   const [events, setEvents] = React.useState([]);
@@ -65,15 +75,7 @@ function Events() {
         >
           {events.map((el) => (
             <Grid item xs={12} sm={4} md={4} lg={4} key={el._id}>
-              <Card
-                sx={{
-                  minHeight: 250,
-                  p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                }}
-              >
+              <Card sx={styles.card}>
                 <div>
                   <Typography variant="h6">{el.title}</Typography>
                   <Typography variant="body1">{el.description}</Typography>
